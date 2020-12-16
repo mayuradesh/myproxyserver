@@ -41,7 +41,7 @@ public class ProxyController {
 		uri = UriComponentsBuilder.fromUri(uri).path(requestUrl).query(request.getQueryString()).build(true).toUri();
 		System.out.println("Calling method: " + method);
 		System.out.println("Calling URL: " + uri);
-
+		System.out.println("Request Body: " + body);
 		HttpHeaders headers = new HttpHeaders();
 		Enumeration<String> headerNames = request.getHeaderNames();
 		while (headerNames.hasMoreElements()) {
